@@ -119,9 +119,9 @@ export default function ChatInterface() {
                   </span>
                 </div>
                 <p className="text-sm leading-relaxed text-slate-600">
-                  Hi, I'm Gemini. I'm an AI that can help you with various tasks
-                  like writing, analysis, math, and coding. What would you like
-                  to explore?
+                  Hi, I&apos;m Gemini. I`&apos;m an AI that can help you with
+                  various tasks like writing, analysis, math, and coding. What
+                  would you like to explore?
                 </p>
               </div>
             </div>
