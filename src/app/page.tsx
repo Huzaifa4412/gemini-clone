@@ -1,3 +1,4 @@
+"use client";
 import { AppSidebar } from "@/components/app-sidebar";
 import MainUI from "@/components/MainUI";
 import { SidebarTrigger } from "@/components/ui/sidebar";

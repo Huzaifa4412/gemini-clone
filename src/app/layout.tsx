@@ -21,6 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         suppressHydrationWarning
+        suppressContentEditableWarning
         className={`antialiased ${urbanist.className}`}
       >
         <ChatProvider>
