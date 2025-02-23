@@ -7,6 +7,11 @@ import { Bot, Send, Sparkles } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { useChats } from "@/context/chatsContext";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import remarkMath from "remark-math";
+import rehypeHighlight from "rehype-highlight";
+import "highlight.js/styles/github-dark.css"; // For code syntax highlighting
 
 interface Message {
   id: string;
@@ -154,9 +159,12 @@ export default function ChatInterface() {
                       {message.role === "user" ? "You" : "Gemini"}
                     </span>
                   </div>
-                  <p className="text-sm leading-relaxed text-slate-600">
+                  <ReactMarkdown
+                    remarkPlugins={[remarkGfm, remarkMath]}
+                    rehypePlugins={[rehypeHighlight]}
+                  >
                     {message.content}
-                  </p>
+                  </ReactMarkdown>
                 </div>
               </div>
             </Card>
