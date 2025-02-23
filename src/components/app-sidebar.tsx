@@ -61,7 +61,9 @@ export function AppSidebar() {
                   <SidebarMenuItem key={id} className="flex items-center">
                     <MessageSquare size={24} />
                     <span className="ml-4 font-semibold text-lg">
-                      {ch.chat as unknown as string}
+                      {ch.chat.length > 5
+                        ? ch.chat.slice(0, 5)
+                        : (ch.chat as unknown as string)}
                     </span>
                   </SidebarMenuItem>
                 ))
